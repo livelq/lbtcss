@@ -1,0 +1,49 @@
+.pic li img{
+	width: 620px;
+	height: 270px;
+}
+
+ul{
+	list-style: none;
+}
+
+.pic li{
+	float:left;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.big{
+	width: 620px;
+	height: 270px;
+	position: relative; /*这个定位的作用是为了里面的ul定位是相对于这个div而不是相对于body*/
+	overflow: hidden;
+}
+.pic{
+	width: 2480px; /*总长度设置给ul*/
+	position: absolute; /* 给第一张图片定位，即在原地不动*/
+	left: 0;
+	animation-name: lunbotu;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+
+
+ @keyframes lunbotu{
+ 	0%,30%{
+ 		left: 0;
+ 	}
+ 	35%,65%{
+        left: -620px;
+        }
+    70%,99%{
+        left: -1240px;
+        }
+    100%{
+        left: -1860px;
+        }       
+}
